@@ -3,6 +3,7 @@ const ImportController = require('../controllers/importController');
 
 const router = express.Router();
 
+router.get('/statuses', ImportController.getStatuses);
 router.post('/upload', ImportController.upload, ImportController.uploadCsv);
 router.get('/', ImportController.getImportList);
 router.get('/:importId', ImportController.getImportDetail);
